@@ -39,6 +39,7 @@
 
     <link rel="stylesheet" type="text/css" href="js/cubeportfolio/cubeportfolio.min.css">
     <link href="js/animations/css/animations.min.css" rel="stylesheet" type="text/css" media="all" />
+    <link rel="stylesheet" href="/DevOps-Portfolio/css/responsive.css">
     <!-- Template's stylesheets END -->
 
     <!-- Style Customizer's stylesheets -->
@@ -141,7 +142,7 @@
                                 <li data-index="rs-1" data-transition="fade">
 
                                     <!-- MAIN IMAGE -->
-                                    <img src="images/slider-grey.jpg" alt="" width="1920" height="1280">
+                                    <img src="images/Slider-grey.jpg" alt="" width="1920" height="1280">
 
                                     <!-- LAYER NR. 1 -->
                                     <div class="tp-caption raleway white uppercase text-white tp-resizeme"
@@ -304,12 +305,12 @@
                         <!--end item-->
                     </div>
                     <!--end item-->
-                    <div class="col-md-6">
+                    <div class="col-md-6" id="computer-img">
                     <lottie-player class="col-md-5 animate-in" data-anim-type="fade-in-left" data-anim-delay="100"
                         src="https://assets5.lottiefiles.com/packages/lf20_w51pcehl.json" background="transparent"
                         speed="1" style="width: 800px; height: 720px;" hover loop>
                     </lottie-player>
-                </div>
+                    </div>
                 </div>
                 <!--end item-->
             </section>
@@ -830,31 +831,62 @@
 
             <!--Section 6 Header -->
             <div id="section6"></div>
-            <section class="section-side-image section-light sec-padding clearfix">
-                <div class="img-holder col-md-12 col-sm-12 pull-left">
-                    <div class="background-imgholder" style="background:url(images/nishkarsh.jpg);"><img
-                            class="nodisplay-image" src="" alt="" /> </div>
-                </div>
-                <div class="container">
-                    <div class="row">
-                        <!--end header section -->
-
-                        <section class="section-light-3 clearfix">
-
-                            <div class="col-sm-12">
-                                <div class="sec-title-container text-center">
-                                    <h5 class="font-weight-4 less-mar-1 line-height-4 opacity-5 text-white"></h5>
-                                    <h1 class="font-weight-6 less-mar-1 line-height-5 text-white"
-                                        data-textAlign="center">Get in touch</h1>
-                                    <div class="ce-title-line"></div>
-                                    <div class="clearfix"></div>
-                                        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdAM1prf5YoW0ygAiclV-reGhx2s4OiPa15Bx1Xpv7C8G63sQ/viewform?embedded=true" width="640" height="954" scrolling="no" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+<section class="section-side-image section-light sec-padding clearfix">
+    <div class="img-holder col-md-12 col-sm-12 pull-left">
+        <div class="background-imgholder" style="background:url(images/nishkarsh.jpg);">
+            <img class="nodisplay-image" src="" alt="" />
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <section class="section-light-3 clearfix">
+                <div class="col-sm-12">
+                    <div class="card">
+                        <h2>Get in touch</h2>
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-group">
+                                    <label for="firstName">First Name</label>
+                                    <input type="text" id="firstName" name="firstName">
                                 </div>
                             </div>
-                            <div class="clearfix"></div>
-                        </section>
-                        <!--end section-->
+                            <div class="col">
+                                <div class="form-group">
+                                    <label for="surname">Surname</label>
+                                    <input type="text" id="surname" name="surname">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input type="text" id="email" name="email">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-group">
+                                    <label for="phone">Phone</label>
+                                    <input type="text" id="phone" name="phone">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-group">
+                                    <label for="message">Message</label>
+                                    <textarea id="message" name="message" rows="2"></textarea>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <input type="submit" value="Submit" onclick="resetForm()">
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="clearfix"></div>
             </section>
+        </div>
+    </div>
+</section>
+
             <!--end section-->
 
 
@@ -1074,6 +1106,20 @@
         })
     </script>
     <script src="js/functions/functions.js"></script>
+
+
+
+    <script>
+        function resetForm() {
+            document.getElementById('firstName').value = '';
+            document.getElementById('surname').value = '';
+            document.getElementById('email').value = '';
+            document.getElementById('phone').value = '';
+            document.getElementById('message').value = '';
+
+            alert('Form submitted successfully!');
+        }
+    </script>
 </body>
 
 </html>

@@ -1,0 +1,258 @@
+/* Default styles for the header */
+.header-section {
+    background-color: #ffffff;
+    /* Add other styles as needed */
+}
+
+.mod-menu {
+    /* Add styles for the menu container */
+}
+
+.logo img {
+    max-width: 100%;
+    height: auto;
+}
+
+.main-nav {
+    /* Add styles for the main navigation */
+}
+
+.main-nav button.navbar-toggle {
+    background: none;
+    border: none;
+    padding: 15px;
+    color: #333;
+    font-size: 18px;
+}
+
+#menu {
+    /* Add styles for the collapsed menu */
+}
+
+#menu ul.navbar-nav {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#menu ul.navbar-nav li {
+    display: block;
+    padding: 10px 0;
+}
+
+.header-section {
+    background: transparent;
+}
+
+.logo img {
+    width: auto; /* Default size for larger screens */
+}
+
+/* Media queries for mobile responsiveness */
+@media (max-width: 767px) {
+
+    .header-section {
+        background: rgba(255, 255, 255, 0.8); /* Slightly transparent background for better readability on mobile */
+    }
+
+    .col-xs-4 {
+        width: 50%; /* Adjust column width for logo on smaller screens */
+    }
+
+    .col-xs-8 {
+        width: 50%; /* Adjust column width for menu on smaller screens */
+    }
+
+    .main-nav button.navbar-toggle {
+        display: block; /* Ensure toggle button is visible on smaller screens */
+    }
+
+    #menu.collapse {
+        display: none; /* Hide the menu by default on smaller screens */
+    }
+
+    #menu.collapse.in {
+        display: block; /* Show the menu when toggled open */
+    }
+
+    #menu ul.navbar-nav li {
+        padding: 5px 0; /* Adjust padding for menu items on smaller screens */
+    }
+    
+    .logo {
+        text-align: center;
+        width: 100%;
+    }
+
+    .logo img {
+        width: 80px; /* Smaller logo size for mobile */
+        margin: auto;
+    }
+    #computer-img {
+        text-align: left; /* Center align the column content on smaller screens */
+    }
+    
+    #computer-img .col-md-5 {
+        display: inline-block; /* Ensure the lottie-player is displayed inline-block */
+        width: 50%; /* Full width for the lottie-player on smaller screens */
+        max-width: 400px; /* Adjust maximum width as needed */
+        max-height: 300px;
+        margin-bottom: 10px; /* Optional: Add spacing between elements */
+    }
+
+   
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    height: 100vh;
+    background: #666666;
+    font-family: 'Balsamiq Sans', sans-serif;
+  }
+  
+  .card {
+    width: 70%;
+    padding: 30px 90px 90px 90px;
+    border: 6px solid rgba(0, 0, 0, 0);
+    border-radius: 50px;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.3); /* Slightly darker transparent background */
+    margin: 0 50px;
+  }
+  
+  .card h2 {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 60px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 40px;
+    font-family:Arial, Helvetica, sans-serif;
+  }
+  
+  .card .row {
+    position: relative;
+    width: 100%;
+    /* display: grid; */
+    grid-template-columns: repeat(auto-fit, minmax(40%, 1fr));
+    grid-gap: 30px;
+  }
+  
+  .card .row .col {
+    position: relative;
+    width: 100%;
+    margin: 30px 20px 40px 0;
+    transition: 0.5s;
+  }
+  
+  .card .row .form-group {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    color: #ffffff;
+
+  }
+  
+  .card .row .form-group input{
+    position: absolute;
+    width: 90%;
+    height: 100%;
+    background: rgb(255, 255, 255, 0.4);
+    outline: none;
+    font-size: 15px;
+    padding: 10px 0 10px 20px;
+    border: 5px solid rgb(15, 15, 150, 0.2);
+    color: #ffffff;
+    border-radius: 50px;
+  }
+  .card .row .form-group textarea{
+    height: 100%;
+    background: rgb(255, 255, 255, 0.4);
+    outline: none;
+    font-size: 15px;
+    padding: 10px 0 10px 20px;
+    border: 5px solid rgb(15, 15, 150, 0.2);
+    color: #ffffff;
+    border-radius: 20px;
+    scrollbar-width: none;
+    width: 90%;
+  }
+  
+  .card .row .form-group label {
+    line-height: 40px;
+    color: #ffffff;
+    font-size: 24px;
+    margin: 0 0 0 30px;
+    display: block;
+    pointer-events: none;
+  }
+  
+  .row .col:nth-child(6) {
+    margin-top: 64px;
+  }
+  
+  .card .row .form-group input:focus,
+  .card .row .form-group textarea:focus {
+    border: 5px solid #ffffff;
+    transition: all 0.5s;
+  }
+  
+  .card .row input[type="submit"] {
+    border: 5px solid rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    height: 100%;
+    width: 50%;
+    cursor: pointer;
+    outline: none;
+    background: transparent;
+    text-transform: uppercase;
+    color: #ffffff;
+    line-height: 40px;
+    font-size: 24px;
+    font-weight: 700;
+    border-radius: 45px;
+    transition: all 0.4s;
+  }
+  
+  .card .row input[type="submit"]:hover {
+    border: 5px solid rgba(255, 255, 255, 1);
+    color: #ffffff;
+    transition: all 0.4s;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .card {
+      width: 90%; /* Adjusted width for smaller screens */
+      padding: 20px;
+      margin: 0 auto; /* Adjusted padding for smaller screens */
+    }
+  
+    .card h2 {
+      font-size: 30px; /* Adjusted font size for smaller screens */
+      margin-bottom: 20px; /* Adjusted margin for smaller screens */
+    }
+  
+    .card .row .form-group input,
+    .card .row .form-group textarea {
+      font-size: 16px; /* Adjusted font size for smaller screens */
+      padding: 12px; /* Adjusted padding for smaller screens */
+    }
+  
+    
+    .submit {
+        font-size: 10px; /* Adjusted font size for smaller screens */
+        padding: 20px auto; 
+        width: 100%;
+        text-align: left;
+    }
+
+    .card .row .form-group textarea {
+        width: calc(100% - 10px); /* Adjusted width for message textarea */
+        font-size: 14px; /* Adjusted font size for smaller screens */
+      }
+  }
